@@ -9,7 +9,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-      <v-menu :location="center">
+      <v-menu location="center">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" v-model="location" icon>
             <v-icon>mdi-dots-vertical</v-icon>
@@ -28,7 +28,7 @@
       </v-menu>
 
       <template v-slot:extension>
-        <v-tabs v-model="tab" align-tabs="title">
+        <v-tabs grow v-model="tab" align-tabs="title">
           <v-tab v-for="item in headers" :key="item" :value="item">
             {{ item }}
           </v-tab>
